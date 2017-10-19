@@ -9,7 +9,7 @@ body {
 }
 img {
 	height: 360px;
-	width: 280px;
+
 }
 .team {
 	padding: 50px 0;
@@ -45,10 +45,10 @@ img {
 	margin: 0 10px;
 	position: relative;
 	width: calc(25% - 20px);
-	background: #fff;
 	min-height: 250px;
 	float: left;
 	overflow: hidden;
+	transition: ease-in-out, .5s;
 }
 .row .column:before {
 	content: '';
@@ -123,10 +123,32 @@ img {
 	transition: .5s;
 	cursor: pointer;
 	font-size: 22px;
+
 }
 .row .column .details ul li a:hover .fa {
 	transform: rotateY(360deg);
 	color: #ff0;
+}
+
+@media (max-width: 992px) {
+	.container {
+		width: 90%;
+		margin: 20px auto;
+	}
+	.row .column {
+		width: calc(50% - 20px);
+		margin-bottom: 20px; 
+	}
+}
+@media (max-width: 767px) {
+	.container {
+		width: 95%;
+		margin: 20px auto;
+	}
+	.row .column {
+		width: calc(100% - 20px);
+		margin-bottom: 20px; 
+	}
 }
 
 
